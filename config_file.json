@@ -1,0 +1,86 @@
+{
+
+      "description": "Guassian windowed sine waves",
+	"soundname": "GaussGrains_0001",
+	"samplerate": 16000,
+	"chunkSecs": 2,
+	"soundDuration": 2,
+      "recordFormat": "params",
+      "tftype": "shards",
+      "shard_size": 2,
+	"params":
+	[
+            {
+                  "user_pname": "irreg_exp",
+                  "user_minval": 0,
+                  "user_maxval": 1,
+                  "user_nvals": 3,
+                  "user_doc": "[0,1]-> [0-1]/event-per-second] standard deviation of gaussian normalized to eps",
+                  "synth_pname": "irreg_exp",
+                  "synth_minval": 0,
+                  "synth_maxval": 1,
+                  "synth_units": "natural"
+            },
+            {
+                  "user_pname": "rate_exp",
+                  "user_minval": 0,
+                  "user_maxval": 1,
+                  "user_nvals": 3,
+                  "user_doc": "[-1,4]-> 2^(n) events per second",
+                  "synth_pname": "rate_exp",
+                  "synth_minval": -1,
+                  "synth_maxval": 4,
+                  "synth_units": "natural"
+            },
+            {
+                  "user_pname": "cf_exp",
+                  "user_minval": 0,
+                  "user_maxval": 1,
+                  "user_nvals": 3,
+                  "user_doc": "[-1,1]-> 440*2^(n) Hz",
+                  "synth_pname": "cf_exp",
+                  "synth_minval": -1,
+                  "synth_maxval": 1,
+                  "synth_units": "natural"
+            },
+            {
+                  "user_pname": "durdutyexp",
+                  "user_minval": 0,
+                  "user_maxval": 1,
+                  "user_nvals": 3,
+                  "user_doc": "[-1,0]-> 2^(n) event duration as a portion of computed inter-onset interval",
+                  "synth_pname": "durdutyexp",
+                  "synth_minval": -1,
+                  "synth_maxval": 0,
+                  "synth_units": "natural"
+            },
+            {
+                  "user_pname": "cfrangeocts",
+                  "user_minval": 0,
+                  "user_maxval": 1,
+                  "user_nvals": 3,
+                  "user_doc": "[0,2]-> range in octaves of event frequencies around center frequency",
+                  "synth_pname": "cfrangeocts",
+                  "synth_minval": 0,
+                  "synth_maxval": 2,
+                  "synth_units": "natural"
+            }
+      ]
+      ,
+      "fixedParams":
+      [
+            {
+                  "synth_pname": "comps",
+                  "user_doc": "[1, 10]-> number of sine wave components",
+                  "synth_val": 1,
+                  "synth_units": "natural"
+            },
+            {
+                  "synth_pname": "nocts",
+                  "user_doc": "[-3, 3]-> number of octaves for frequency sweep around cf",
+                  "synth_val": 0,
+                  "synth_units": "natural"
+            }
+
+      ]
+}

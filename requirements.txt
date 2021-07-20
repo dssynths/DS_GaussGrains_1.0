@@ -1,0 +1,5 @@
+-e git+https://github.com/lonce/paramManager#egg=paramManager
+-e git+https://github.com/dssynths/genericSynth#egg=genericSynth
+-e git+https://github.com/dssynths/nsjsonmanager#egg=nsjsonmanager
+-e git+https://github.com/dssynths/DSGenerator#egg=DSGenerator
+-e git+https://github.com/dssynths/tfrecordmanager#egg=tfrecordmanager
